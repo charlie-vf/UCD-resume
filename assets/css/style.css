@@ -86,3 +86,36 @@ a font-size again. */
     font-size: 14px;
     padding: 0;
 }
+
+.menuitem {
+    height: 120px;
+    text-align: center;
+    padding: 0;
+}
+
+.menuitem a {
+    width: 100%;
+    text-decoration: none;
+    color: #fff;
+    height: 120px;
+}
+
+/* targets the fontawesome icons
+display: block puts the icons on a line independent of the text 
+font-size can be used to move the text further down without positioning it*/
+.menuitem a i {
+    padding-top: 22px;
+    display: block;
+    color: #fafafa;
+    font-size: 26px;
+}
+
+.menuitem span {
+    display: block;
+    padding-top: 5px;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 300;
+    letter-spacing: 2px;
+}
