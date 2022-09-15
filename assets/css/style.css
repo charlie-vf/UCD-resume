@@ -7,6 +7,22 @@
     background-color: #676767;
 }
 
+.ui-menu-color-home {
+    background: #e67e22;
+}
+
+.ui-menu-color-resume {
+    background: #9b59b6;
+}
+
+.ui-menu-color-contact {
+    background: #3498db;
+}
+
+.ui-menu-color-download {
+    background: #525252;
+}
+
 /*--------------------------------------------Heading */
 
 header {
@@ -44,4 +60,29 @@ header {
     margin-top: 20px;
     margin-bottom: 90px;
     color: #ffffff;
+}
+
+/* class taken from dev tools when working out what was causing margin between nav links.
+
+there is still a margin before the first li (Home) even after using this - we added the 
+no-gutters class to the rows to remove this as Bootstrap4 adds margins to rows by default */
+.list-inline-item:not(:last-child) {
+    margin: 0;
+}
+
+/* When we display items inline, then the white space that's in our HTML file becomes 
+visible as a single space between our items.
+The way to solve this is to create a container with the font-size of 0 so that the spaces 
+are not displayed. */
+.menucontainer {
+    font-size: 0;
+}
+
+/* because the menucontainer class is on the ul (the parent) it makes all the li fonts 0, too, 
+so use the nav id (this is why we've got the id) to override that and make the li elements have
+a font-size again. */
+
+#nav li {
+    font-size: 14px;
+    padding: 0;
 }
