@@ -23,6 +23,27 @@
     background: #525252;
 }
 
+/*--------------------------------------------Special paddings/margins/text */
+
+/* setting all header margins to 0 by default is good to avoid any random spaces */
+h1, 
+h2, 
+h3, 
+h4 {
+    margin: 0;
+}
+
+.uppercase {
+    text-transform: uppercase;
+}
+
+.general-sub {
+    font-family: 'Exo', sans-serif;
+    font-weight: 300;
+    color: #fafafa;
+}
+
+
 /*--------------------------------------------Heading */
 
 header {
@@ -131,4 +152,14 @@ font-size can be used to move the text further down without positioning it*/
 .hvr-sweep-to-bottom:before {
     background-color: rgba(0, 0, 0, 0.2);
     height: 120px;
+}
+
+/*--------------------------------------------Footer */
+
+footer {
+    background-color: #525252;
+    color: #fafafa;
+    /* it can extend beyond 120px, but will default to this if there is no text making it larger */
+    min-height: 120px;
+    margin: 0;
 }
