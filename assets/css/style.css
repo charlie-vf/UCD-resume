@@ -78,6 +78,11 @@ are not displayed. */
     font-size: 0;
 }
 
+/* the navigation menu was not lining up with the bottom of the image - margin 0 fixes this */ 
+#nav {
+    margin: 0;
+}
+
 /* because the menucontainer class is on the ul (the parent) it makes all the li fonts 0, too, 
 so use the nav id (this is why we've got the id) to override that and make the li elements have
 a font-size again. */
@@ -118,4 +123,12 @@ font-size can be used to move the text further down without positioning it*/
     font-size: 14px;
     font-weight: 300;
     letter-spacing: 2px;
+}
+
+/*--------------------------------------------Hover.css */
+
+/* changes the default blue sweep to a faded black overlay of the original color */
+.hvr-sweep-to-bottom:before {
+    background-color: rgba(0, 0, 0, 0.2);
+    height: 120px;
 }
