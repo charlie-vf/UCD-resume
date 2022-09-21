@@ -44,8 +44,147 @@
             </div>
         </div>
     </header>
-    <section>
-        
+    <!--
+        copy & pasted the whole section from index.html then edited the content
+    -->
+    <section class="container-fluid">
+        <!-- 
+            row-table specifies use of table structure so columns will remain 
+            the same height regardless of content 
+        -->
+        <!-- 
+            row-table class was removed & left as just row as it was causing issues with layout
+            about me divs were taking up the whole width of the screen, when they should be
+            taking 2/3 (As specified with col-md-8 in the first child of div class="row")
+        -->
+        <div class="row">
+            <!--
+                placing the contact details div above the about me div as html by default
+                displays first what it reads first & we want contact on the left
+            -->
+            <div class="col-md-4 bg-color-personal-info section-column">
+                <div class="row">
+                    <!--
+                        width 12 means full width on all screen sizes
+                    -->
+                    <div class="col-12">
+                        <h3 class="section-heading uppercase">
+                            Work History
+                        </h3>
+                    </div>
+                </div>
+            </div>
+            <!-- 
+                8 is 2/3 the width of the screen
+                don't need to add any classes for screen sizes smaller than medium as Bootstrap
+                will default to 12 - full width 
+            -->
+            <!-- 
+                section-column specifies the use of a table cell, which will give us evenly 
+                sized columns in terms of height.
+            -->
+            <div class="col-md-8 bg-color-three-reasons section-column">
+                <div class="row">
+                    <div class="col">
+                        <h3 class="section-heading uppercase">My Skills</h3>
+                    </div>
+                </div>
+                <div class="row">
+                    <!--
+                        mobile: 10 columns wide & offset 1 aka centered with 1 column margin
+                        down left side
+                        offset off for tablets and larger because we want the content to appear
+                        in 3 columns for tablets (4*3 = 12) and 2 columns for larger (6*2 = 12)
+                        12 is full width
+                    -->
+                    <div class="col-10 offset-1 offset-sm-0 col-sm-4 col-md-6">
+                        <div class="row">
+                            <div class="col-2">
+                                <i class="three-reasons-icon fa fa-tv" aria-hidden="true"></i>
+                            </div>
+                            <div class="col-10">
+                                <h4 class="three-reasons-heading uppercase">
+                                    Front End
+                                </h4>
+                                <p>
+                                    I'm skilled in User Experience Design using the trinity of HTML/CSS/Javascript. 
+                                    I also have extensive experience in Front End Frameworks such as Angular and 
+                                    React
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-10 offset-1 offset-sm-0 col-sm-4 col-md-6">
+                        <div class="row">
+                            <div class="col-2">
+                                <i class="three-reasons-icon fa fa-gears" aria-hidden="true"></i>
+                            </div>
+                            <div class="col-10">
+                                <h4 class="three-reasons-heading uppercase">Back End</h4>
+                                <p>
+                                    I specialize in data-driven web applications. Many of my projects utilise 
+                                    document-based data. I use Python and Django in conjunction with MongoDB 
+                                    to process and present information.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--
+                    progress-section class styled in css to give more margins around the progress bars
+                -->
+                <div class="row progress-section">
+                    <div class="col">
+                        <!--
+                            class=progress:
+                            default built-in class provided by Bootstrap that acts as a wrapper for 
+                            a progress bar and its content.
+                        -->
+                        <div class="progress">
+                            <!--
+                                progress-bar is the class for the actual progress bar
+                            -->
+                            <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" 
+                                aria-valuemax="100" style="width:90%">
+                                <span class="sr-only">90% Complete</span>
+                            </div>
+                            <!--
+                                textual description of what the progress bar is communicating to us
+                            -->
+                            <span class="progress-type">HTML / HTML5</span>
+                        </div>
+                        <!--
+                            the bg- classes are built-in color classes from Bootstrap
+                        -->
+                        <div class="progress">
+                            <div class="progress-bar bg-success" role="progressbar" aria-valuenow="80" aria-valuemin="0" 
+                                aria-valuemax="100" style="width:80%">
+                                <span class="sr-only">80% Complete</span>
+                            </div>
+                            <span class="progress-type">CSS / CSS3</span>
+                        </div>
+                        <div class="progress">
+                            <div class="progress-bar bg-info" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width:70%;">
+                                <span class="sr-only">70% complete</span>
+                            </div>
+                            <span class="progress-type">JavaScript / jQuery</span>
+                        </div>
+                        <div class="progress">
+                            <div class="progress-bar bg-warning" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width:80%;">
+                                <span class="sr-only">80% complete</span>
+                            </div>
+                            <span class="progress-type">Django / Python</span>
+                        </div>
+                        <div class="progress">
+                            <div class="progress-bar bg-danger" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width:80%;">
+                                <span class="sr-only">80% complete</span>
+                            </div>
+                            <span class="progress-type">SQL / NoSQL</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
     <footer class="container-fluid">
         <div id="footer-details" class="row">
