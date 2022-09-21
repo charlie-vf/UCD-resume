@@ -43,6 +43,10 @@ h4 {
     color: #fafafa;
 }
 
+.inline-block {
+    display: inline-block;
+}
+
 
 /*--------------------------------------------Heading */
 
@@ -162,4 +166,53 @@ footer {
     /* it can extend beyond 120px, but will default to this if there is no text making it larger */
     min-height: 120px;
     margin: 0;
+}
+
+/* footer titles were hugging the top of the div 
+    adding all around padding centers the text better */
+#footer-details {
+    padding: 20px;
+}
+
+.cv-pdf i {
+    font-size: 18px;
+    color: #fafafa;
+    text-align: center;
+    /* padding-left moves it a little away from the text */
+    padding-left: 5px;
+    /* transition added here as it should be in the parent element, not the :hover */
+    transition: all 0.35s ease-in-out;
+    -moz-transition: all 0.35s ease-in-out;
+    -webkit-transition: all 0.35s ease-in-out;
+    -o-transition: all 0.35s ease-in-out;
+}
+
+.cv-pdf i:hover {
+    color: #e84610;
+}
+
+.social-links {
+    padding-bottom: 15px;
+}
+
+/* font awesome links in social lists */
+.social-links li a i {
+    width: 32px;
+    height: 32px;
+    padding: 12px 0;
+    /* equal width & height + 50% radius = circle */
+    border-radius: 50%;
+    font-size: 13px;
+    line-height: 7px;
+    text-align: center;
+    color: #fafafa;
+    background: #8f8f8f;
+    transition: all 0.35s ease-in-out;
+    -moz-transition: all 0.35s ease-in-out;
+    -webkit-transition: all 0.35s ease-in-out;
+    -o-transition: all 0.35s ease-in-out;
+}
+
+.social-links li a i:hover {
+    background: #e84610;
 }
