@@ -15,6 +15,10 @@
     background-color: #f4f4f4;
 }
 
+.bg-color-work-history {
+    background: #9b59b6;
+}
+
 .ui-menu-color-home {
     background-color: #e67e22;
 }
@@ -67,6 +71,7 @@ which ensures that the columns will remain equal height, regardless of their con
     float: none;
 }
 
+.history-heading,
 .section-heading {
     font-family: "Exo", sans-serif;
     font-weight: 300;
@@ -332,4 +337,62 @@ footer {
 
 .progress-section {
     margin: 40px 20px;
+}
+
+/*--------------------------------------------Work history */
+
+.history-heading {
+    color: #fafafa;
+    margin-bottom: 50px;
+}
+/*
+    border-left creates the line to the side
+*/
+.timeline-item {
+    padding: 4em 2em 0em 2em;
+    position: relative;
+    color: #fafafa;
+    border-left: 1px solid;
+}
+
+.timeline-item p {
+    padding: 0;
+    margin: 0;
+}
+
+/*
+    content: can only be used with :before or :after pseudo elements
+    the font-size fixed the fact the text was too close to the div heading
+    if we didn't change the font-size, different paddings may have been needed
+*/
+.timeline-item:before {
+    content: attr(data-dates);
+    position: absolute;
+    left: 2.5em;
+    top: 3em;
+    display: block;
+    font-family: 'Exo', sans-serif;
+    font-weight: 500;
+    font-size: 0.8em;
+    padding: 0;
+    margin: 0;
+}
+
+/*
+    this is the ball on the left border line
+*/
+.timeline-item:after {
+    width: 12px;
+    height: 12px;
+    display: block;
+    top: 2.4em;
+    position: absolute;
+    left: -6px;
+    border-radius: 12px;
+    content: ' ';
+    background: #fafafa;
+}
+
+.history-items {
+    margin-bottom: 30px;
 }
