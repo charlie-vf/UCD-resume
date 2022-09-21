@@ -253,3 +253,55 @@ footer {
 .three-reasons-heading {
     margin-bottom: 15px;
 }
+
+/*--------------------------------------------Personal info */
+
+/* 
+    we want each personal info item to stand alone
+    aka take up maximum horizontal space available and push siblings below
+*/
+.personal-info-item {
+    margin-bottom: 20px;
+    display: block;
+    clear: both;
+}
+
+/*
+    this is what visually moved the values & keys to be on the same line with the siblings
+    below each one     
+*/
+.personal-info-item .key,
+.personal-info-item .value {
+    padding-right: 8px;
+    display: inline-block;
+}
+
+/*
+    this moved each key:value pair to be closer vertically to each other
+*/
+.personal-info-item .key p,
+.personal-info-item .value p {
+    margin: 0;
+}
+
+/*
+    width set to 30% as value width will be 60% so together they take up 90% of the div space
+*/
+.personal-info-item .key {
+    width: 30%;
+    margin-right: 21px;
+    padding-top: 2px;
+    vertical-align: top;
+}
+
+.personal-info-item .key p {
+    font-weight: 700;
+}
+
+/* 
+    position relative as we want the value to be relative to its predecessor
+*/
+.personal-info-item .value {
+    position: relative;
+    width: 60%;
+}
