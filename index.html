@@ -49,7 +49,81 @@
             row-table specifies use of table structure so columns will remain 
             the same height regardless of content 
         -->
-        <div class="row row-table">
+        <!-- 
+            row-table class was removed & left as just row as it was causing issues with layout
+            about me divs were taking up the whole width of the screen, when they should be
+            taking 2/3 (As specified with col-md-8 in the first child of div class="row")
+        -->
+        <div class="row">
+            <!--
+                placing the contact details div above the about me div as html by default
+                displays first what it reads first & we want contact on the left
+            -->
+            <div class="col-md-4 bg-color-personal-info section-column">
+                <div class="row">
+                    <!--
+                        width 12 means full width on all screen sizes
+                    -->
+                    <div class="col-12">
+                        <h3 class="section-heading uppercase">
+                            Personal Info
+                        </h3>
+                    </div>
+                </div>
+                <!--
+                    using key:value pairs concept here just for simplicity sake
+                    the class names could technically be anything
+                    but these are key:value pairs so it makes sense
+                -->
+                <div class="personal-info-item">
+                    <div class="key">
+                        <p class="uppercase">
+                            Name:
+                        </p>
+                    </div>
+                    <div class="value">
+                        <p>
+                            Rosie Odenkirk
+                        </p>
+                    </div>
+                </div>
+                <div class="personal-info-item">
+                    <div class="key">
+                        <p class="uppercase">
+                            Address:
+                        </p>
+                    </div>
+                    <div class="value">
+                        <p>
+                            17 Riverdale, Catskills, NY, USA
+                        </p>
+                    </div>
+                </div>
+                <div class="personal-info-item">
+                    <div class="key">
+                        <p class="uppercase">
+                            Phone:
+                        </p>
+                    </div>
+                    <div class="value">
+                        <p>
+                            555 245 1092
+                        </p>
+                    </div>
+                </div>
+                <div class="personal-info-item">
+                    <div class="key">
+                        <p class="uppercase">
+                            Email:
+                        </p>
+                    </div>
+                    <div class="value">
+                        <p>
+                            rosie.odenkirk@hansaw.com
+                        </p>
+                    </div>
+                </div>
+            </div>
             <!-- 
                 8 is 2/3 the width of the screen
                 don't need to add any classes for screen sizes smaller than medium as Bootstrap
